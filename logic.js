@@ -27,6 +27,7 @@ let thingsToRank = [
   ["Jaden likes pizza!", 0],
   ["This recipe makes a lot!", 0],
   ["Matter where we sit!", 0],
+  ["*loud sniff*", 0],
 ];
 
 const rankReset = JSON.parse(JSON.stringify(thingsToRank));
@@ -112,7 +113,12 @@ const showResults = () => {
     const span = document.createElement("span");
     const br = document.createElement("br");
     span.innerHTML =
-      ar[i][0] + " : " + ar[i][1] + " (" + (ar[i][1] / total) * 100 + "%)";
+      ar[i][0] +
+      " : " +
+      ar[i][1] +
+      " (" +
+      Math.round((ar[i][1] / total) * 100) +
+      "%)";
     resultsEl.appendChild(span);
     resultsEl.appendChild(br);
   }
