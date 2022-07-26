@@ -118,7 +118,7 @@ const showResults = () => {
   console.log(ar);
 
   const total = (rankReset.length - 1) * (currentPerson + 1);
-
+  resultsEl.innerHTML = "";
   for (let i = 0; i < ar.length; i++) {
     const span = document.createElement("span");
     const br = document.createElement("br");
