@@ -4,6 +4,7 @@ const nextEl = document.getElementById("next");
 const doneEl = document.getElementById("done");
 const progressEl = document.getElementById("progress");
 const resultsEl = document.querySelector("p");
+const bodyEl = document.querySelector("body");
 
 nextEl.addEventListener("click", () => {
   nextPerson();
@@ -28,7 +29,8 @@ let thingsToRank = [
   ["Ariel!", 0],
   ["Calico!", 0],
   ["*loud sniff*", 0],
-  ["BEEAR", 0]["He's not a nice guy!"],
+  ["BEEAR", 0],
+  ["He's not a nice guy!", 0],
 ];
 
 const rankReset = JSON.parse(JSON.stringify(thingsToRank));
@@ -38,6 +40,13 @@ let results = [];
 let currentPair = 0;
 let done = false;
 let currentPerson = 0;
+
+const randomBackground = () => {
+  const r = Math.random() * 55 + 200;
+  const g = Math.random() * 55 + 200;
+  const b = Math.random() * 55 + 200;
+  bodyEl.style.backgroundColor = `rgb(${r},${g},${b})`;
+};
 
 const displayItems = (pairIndex) => {
   optionAEl.innerHTML = thingsToRank[pairs[pairIndex][0]][0];
@@ -159,3 +168,4 @@ for (let i = 0; i < pairs.length; i++) {
 progressEl.innerHTML = `1 out of ${pairs.length}`;
 
 displayItems(0);
+randomBackground();
