@@ -75,6 +75,7 @@ const shuffle = (array) => {
 
 const nextPair = () => {
   if (currentPair < pairs.length - 1) {
+    randomBackground();
     currentPair++;
     displayItems(currentPair);
     progressEl.innerHTML = `${currentPair + 1} out of ${pairs.length}`;
