@@ -21,13 +21,14 @@ optionBEl.addEventListener("click", () => {
 let thingsToRank = [
   ["RIGHT right.", 0],
   ["I knew that!", 0],
-  ["Sleeping vertical!", 0],
+  ["Zero points!", 0],
   ["BOB! BOB!!!", 0],
   ["The paper towel needs refilled!", 0],
   ["Jaden likes pizza!", 0],
-  ["This recipe makes a lot!", 0],
-  ["Matter where we sit!", 0],
+  ["Ariel!", 0],
+  ["Calico!", 0],
   ["*loud sniff*", 0],
+  ["BEEAR", 0]["He's not a nice guy!"],
 ];
 
 const rankReset = JSON.parse(JSON.stringify(thingsToRank));
